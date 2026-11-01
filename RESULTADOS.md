@@ -2,25 +2,25 @@
 
 
 ## 📈 Resumen
-✅ 17 correctas de 21 queries
+✅ 19 correctas de 21 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.48 ms
+⏱ Tiempo: 0.49 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.40 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -30,31 +30,21 @@
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.47 ms
+⏱ Tiempo: 0.36 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 6: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--nombre | precio
-+UPPER(nombre) | precio
- DISCO DURO SATA3 1TB | 86.99
- MEMORIA RAM DDR4 8GB | 120.00
- DISCO SSD 1 TB | 150.99
-```
+## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.52 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -65,35 +55,25 @@
 +++ 
 @@ -1,4 +1,4 @@
 -nombre | precio
-+LOWER(nombre) | precio
++precio | precio
  disco duro sata3 1tb | 86.99
  memoria ram ddr4 8gb | 120.00
  disco ssd 1 tb | 150.99
 ```
 
-⏱ Tiempo: 0.52 ms
+⏱ Tiempo: 0.39 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.36 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 9: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--nombre | precio
-+nombre | ROUND(precio)
- Disco duro SATA3 1TB | 87.00
- Memoria RAM DDR4 8GB | 120.00
- Disco SSD 1 TB | 151.00
-```
+## ✅ Query 9: Correcto
 
 ⏱ Tiempo: 0.36 ms
 🔍 No se usó ningún índice en esta consulta.
@@ -109,14 +89,14 @@
 
 ## ✅ Query 11: Correcto
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.39 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.36 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
@@ -137,14 +117,14 @@
 
 ## ✅ Query 15: Correcto
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.40 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.37 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -154,7 +134,7 @@
 
 ## ✅ Query 17: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.38 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -164,21 +144,21 @@
 
 ## ✅ Query 18: Correcto
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.36 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 19: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.37 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 20: Correcto
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
