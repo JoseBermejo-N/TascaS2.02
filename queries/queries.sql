@@ -59,34 +59,67 @@ SELECT nombre, precio FROM producto ORDER BY precio DESC LIMIT 1;
 SELECT nombre FROM producto WHERE codigo_fabricante=2;
 
 -- 21. Retorna una llista amb el nom del producte, preu i nom de fabricant (nombre del fabricante) de tots els productes de la base de dades.
-
+SELECT p.nombre, p.precio, f.nombre AS 'nombre del fabricante'
+FROM producto p
+INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo;
 
 -- 22. Llista tots els productes amb nom, preu i nom del fabricant (nombre del fabricante) ordenats alfabèticament.
-
+SELECT p.nombre, p.precio, f.nombre AS 'nombre del fabricante'
+FROM producto p
+INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo
+ORDER BY p.nombre ASC;
 
 -- 23. Retorna una llista amb el codi del producte, nom del producte, codi del fabricant (codigo fabricante) i nom del fabricant (nombre fabricante), de tots els productes de la base de dades.
-
+SELECT p.codigo, p.nombre, f.codigo AS 'codigo fabricante', f.nombre AS 'nombre del fabricante'
+FROM producto p
+INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo;
 
 -- 24. Retorna el nom, el preu i el nom del fabricant (fabricante), del producte més barat.
-
+SELECT p.nombre, p.precio, f.nombre AS 'fabricante'
+FROM producto p
+INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo
+ORDER BY p.precio ASC
+LIMIT 1;
 
 -- 25. Retorna el nom del producte, el preu i el nom del seu fabricant (fabricante), del producte més car.
-
+SELECT p.nombre, p.precio, f.nombre AS 'fabricante'
+FROM producto p
+INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo
+ORDER BY p.precio DESC
+LIMIT 1;
 
 -- 26. Retorna una llista amb nom i preu de tots els productes del fabricant Lenovo.
-
+SELECT p.nombre, p.precio
+FROM producto p
+INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo
+WHERE f.nombre = 'Lenovo';
 
 -- 27. Retorna una llista amb nom i preu de tots els productes del fabricant Crucial que tinguin un preu major que 200 €
-
+SELECT p.nombre, p.precio
+FROM producto p
+INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo
+WHERE f.nombre = 'Crucial' 
+AND p.precio > 200;
 
 -- 28. Retorna un llistat amb nom, preu i nom del fabricant (fabricante) de tots els productes dels fabricants Asus, Hewlett-Packard i Seagate. Sense utilitzar l'operador IN.
-
+SELECT p.nombre, p.precio, f.nombre AS 'fabricante'
+FROM producto p
+INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo
+WHERE f.nombre = 'Asus'
+OR f.nombre = 'Hewlett-Packard' 
+OR f.nombre= 'Seagate';
 
 -- 29. Retorna un llistat amb nom, preu i nom del fabricant (fabricante) de tots els productes dels fabricants Asus, Hewlett-Packard i Seagate. Fent servir l'operador IN.
-
+SELECT p.nombre, p.precio, f.nombre AS 'fabricante'
+FROM producto p
+INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo
+WHERE f.nombre IN ('Asus', 'Hewlett-Packard', 'Seagate');
 
 -- 30. Retorna un llistat amb el nom, el preu i el nom del fabricant (fabricante) dels productes, on el nom del fabricant acabi en la lletra 'e'.
-
+SELECT p.nombre, p.precio, f.nombre AS 'fabricante'
+FROM producto p
+INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo
+WHERE f.nombre LIKE '%e';
 
 -- 31. Retorna un llistat amb el nom del producte, el seu preu i el nom del fabricant (fabricante), per a tots aquells productes els fabricants dels quals contenen la lletra 'w' en el seu nom.
 
